@@ -3,6 +3,7 @@ import "../styles/Dashboard.css";
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from 'axios';
+import NavBar from '../components/navbar';
 
 const Dashboard = () => {
   const [ token, setToken ] = useState(JSON.parse(localStorage.getItem("auth")) || "");
@@ -36,11 +37,14 @@ const Dashboard = () => {
   }, [token]);
 
   return (
+    <>
+      <NavBar />
     <div className='dashboard-main'>
       <h1>Dashboard</h1>
       <p>Hi { data.msg }! { data.luckyNumber }</p>
       <Link to="/logout" className="logout-button">Logout</Link>
     </div>
+    </>
   )
 }
 

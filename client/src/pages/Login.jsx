@@ -33,7 +33,7 @@ const Login = () => {
         );
         localStorage.setItem('auth', JSON.stringify(response.data.token));
         toast.success("Login successfull");
-        navigate("/dashboard");
+        navigate("/home");
       } catch (err) {
         console.log(err);
         toast.error(err.message);
@@ -46,7 +46,7 @@ const Login = () => {
   useEffect(() => {
     if(token !== ""){
       toast.success("You already logged in");
-      navigate("/dashboard");
+      navigate("/home");
     }
   }, []);
 

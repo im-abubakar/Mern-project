@@ -1,0 +1,13 @@
+.background-container {
+    background-image: url('path/to/your/backgroundImage.jpg'); /* Set the background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    /* Add any additional styles for the background container */
+  }
+  
+  .tourist-text {
+    text-align: center; /* Center the text horizontally */
+    padding: 50px; /* Add padding around the text */
+    color: white; /* Set text color */
+    /* Add any additional styles for the text */
+  }
